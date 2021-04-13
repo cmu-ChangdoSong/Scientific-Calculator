@@ -1,10 +1,22 @@
 package io.michaelcane;
 
+import java.util.ArrayList;
 
 public class Calculator {
 
-    Commands commands = new Commands();
+//    Commands commands = new Commands();
 
+    public static double sumAll(ArrayList<Double> list) {
+        /**
+         * This method should take two values (double)
+         * and adds them together, returning the new value.
+         */
+    	double sum = 0.0;
+    	for (int i=0; i<list.size(); i++) {
+    		sum += list.get(i);
+    	}
+        return sum;
+    }
     /**
      * Failed to go over methods that require their return to be degrees or radians.
      * Go back and add functionality.
@@ -161,10 +173,10 @@ public class Calculator {
         System.out.println("ERROR - You broke the universe");
     }
 
-    public void itsTimeForTheCalculator() {
-        commands.giveCommand(Commands.Command.COSINE);
-        commands.doTheThing();
-    }
+//    public void itsTimeForTheCalculator() {
+//        commands.giveCommand(Commands.Command.COSINE);
+//        commands.doTheThing();
+//    }
 
 
 

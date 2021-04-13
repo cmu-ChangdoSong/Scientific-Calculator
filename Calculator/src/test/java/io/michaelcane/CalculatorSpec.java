@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+
 /**
  * This is the TEST document for the Calculator.java class
  */
@@ -18,6 +20,21 @@ public class CalculatorSpec {
     }
 
     double delta = 1e-15;
+    @Test
+    public void test$sumAll() {
+        /**
+         * This method should take two values (double)
+         * and adds them together, returning the new value.
+         */
+        double expectedValue = 12;
+        ArrayList<Double> list = new ArrayList<Double>();
+        list.add(3.0);
+        list.add(4.0);
+        list.add(5.0);
+        double actualValue = calculator.sumAll(list);
+        assertEquals("This should evaluate to 12", expectedValue, actualValue, delta);
+    }
+    
     @Test
     public void test$sum() {
         /**
