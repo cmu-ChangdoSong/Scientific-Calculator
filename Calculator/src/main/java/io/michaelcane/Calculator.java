@@ -48,6 +48,18 @@ public class Calculator {
         return value1 / value2;
     }
 
+    public static double multiplyAll(ArrayList<Double> list) {
+        /**
+         * This method should take two values (double)
+         * and multiply the first with the second.
+         */
+        double res = 1;
+        for (int i=0;i<list.size(); i++) {
+        	res *= list.get(i);
+        }
+        return res;
+    }
+    
     public static double multiply(double value1, double value2) {
         /**
          * This method should take two values (double)

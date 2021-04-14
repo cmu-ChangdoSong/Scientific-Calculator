@@ -67,7 +67,21 @@ public class CalculatorSpec {
         double actualValue = calculator.divide(20, 2);
         assertEquals("This should evaluate to 10", expectedValue, actualValue, delta);
     }
-
+    @Test
+    public void test$multiplyAll() {
+        /**
+         * This method should take two values (double)
+         * and multiply the first with the second.
+         */
+        double expectedValue = 300;
+        ArrayList<Double> list = new ArrayList<Double>();
+        list.add(5.0);
+        list.add(6.0);
+        list.add(10.0);
+        double actualValue = calculator.multiplyAll(list);
+        assertEquals("This should evaluate to 300", expectedValue, actualValue, delta);
+    }
+    
     @Test
     public void test$multiply() {
         /**
